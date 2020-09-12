@@ -12,10 +12,10 @@ function Days({daysInMonth, firstDayOfMonth}){
         
         if(i < firstDayOfMonth){
             daysItem.push(
-                <div key={0}></div>
+                <div key={i}></div>
             )
         } 
-        
+
         else{
             
             daysItem.push(

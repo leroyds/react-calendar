@@ -4,7 +4,7 @@ import getDaysInMonth from './ownFunctions/GetDaysInMonth'
 import getFirstDayOfMonth from './ownFunctions/GetFirstDayOfMonth'
 
 // components import
-import Month from './elements/Month'
+import Header from './elements/Header'
 import WeekDays from './elements/WeekDays'
 import Days from './elements/Days'
 
@@ -20,25 +20,20 @@ function Calendar() {
     const [day,setDay] = useState(date.getDate());
     const [month, setMonth] = useState(date.getMonth());
     const [year, setYear] = useState(date.getFullYear());
-    const [daysInMonth, setdaysInMonth] = useState(getDaysInMonth(year, month));
-    const [firstDayOfMonth, setFirstDayOfMonth] = useState(getFirstDayOfMonth(year, month))
-    
-    
-    console.log(firstDayOfMonth)
+    const [daysInMonth, setdaysInMonth] = useState(getDaysInMonth(date));
+    const [firstDayOfMonth, setFirstDayOfMonth] = useState(getFirstDayOfMonth(date))
 
     useEffect(()=>{
         setDay(date.getDate());
         setMonth(date.getMonth());
         setYear(date.getFullYear());
-        setdaysInMonth(getDaysInMonth(year, month));
-        setFirstDayOfMonth(getFirstDayOfMonth(year, month));
+        setdaysInMonth(getDaysInMonth(date));
+        setFirstDayOfMonth(getFirstDayOfMonth(date));
     },[date])
     
-    // console.log(daysInMonth)
-    return(
-        
+    return( 
         <div className="calendar">
-            <Month month={month} date={date.toDateString()}/>
+            <Header month={month} date={date} setDate={setDate}/>
             <WeekDays/>
             <Days daysInMonth={daysInMonth} firstDayOfMonth={firstDayOfMonth}/>
         </div>

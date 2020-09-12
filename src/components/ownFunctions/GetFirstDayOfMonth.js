@@ -1,6 +1,6 @@
-const getFirstDayOfMonth = (year, month) => {
+const getFirstDayOfMonth = (date) => {
     
-    return new Date(year, month, 1).getDay()
+    return new Date(date.getFullYear(), date.getMonth(), 1).getDay()
 }
 
 export default getFirstDayOfMonth

@@ -59,3 +59,18 @@ body{
   padding: 15px;
   font-size: 16px;
 }
+
+.next-btn,
+.prev-btn{
+
+  background-color: rgba(0, 0,0,0.2);
+  display: inline-block;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.next-btn:hover,
+.prev-btn:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0,0,0.4);
+}
