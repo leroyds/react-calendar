@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: "Lato", "sans-serif";
+}
+
+.wrapper{
+  display: flex;
+  width: 100vw;
+  height:100vh;
+  background-color: #dfe6e9;
+}
+
+.calendar{
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  margin: auto;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.3);
+}
+
+.month-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color:#fff;
+  background-color: #2ecc71;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.week-days{
+  display: flex;
+  background-color: #27ae60;
+  color: white;
+  padding: 7px 0;
+}
+
+.week-days div{
+  width: 14.28%;
+  text-align: center;
+}
+
+.days{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.days div{
+  width: 14.28%;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+}
