@@ -3,7 +3,12 @@ import React from 'react'
 // import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 
-function Month(props) {
+function Month({month, date}) {
+    const MONTHS = [
+        'January', 'February', 'March', 'April', 
+        'May', 'june', 'July', 'August', 'September', 
+        'October', 'November', 'December'];
+    month = MONTHS[month]
     
     return(
         
@@ -13,8 +18,8 @@ function Month(props) {
             </div>
 
             <div>
-            <h2>{props.month}</h2>
-                <p>{props.date}</p>
+                <h2>{month}</h2>
+                <p>{date}</p>
             </div>
 
             <div>

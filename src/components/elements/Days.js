@@ -1,12 +1,27 @@
 import React from 'react'
 
-function Days({days=30}){
+
+
+function Days({daysInMonth, firstDayOfMonth}){
 
     let daysItem = []
-    for(let i =1; i<= days; i++){
-        daysItem.push(
-        <div key={i}>{i}</div>
-        )
+    const totalLoop = daysInMonth + firstDayOfMonth;
+    const counterHelp = firstDayOfMonth -1
+
+    for(let i = 0; i < totalLoop ; i++){
+        
+        if(i < firstDayOfMonth){
+            daysItem.push(
+                <div key={0}></div>
+            )
+        } 
+        
+        else{
+            
+            daysItem.push(
+            <div key={i}>{i-counterHelp}</div>
+            )
+        }
     }
 
     return(
