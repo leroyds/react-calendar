@@ -3,18 +3,18 @@ import React from 'react'
 // import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 
-function Month() {
+function Month(props) {
     
     return(
+        
         <div className="month-info">
-
             <div className="prev-btn">
                 prev
             </div>
 
             <div>
-                <h2>June</h2>
-                <p>Sat June 01 2019</p>
+            <h2>{props.month}</h2>
+                <p>{props.date}</p>
             </div>
 
             <div>

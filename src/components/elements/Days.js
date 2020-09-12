@@ -5,7 +5,7 @@ function Days({days=30}){
     let daysItem = []
     for(let i =1; i<= days; i++){
         daysItem.push(
-        <div>{i}</div>
+        <div key={i}>{i}</div>
         )
     }
 
