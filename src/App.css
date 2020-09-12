@@ -27,6 +27,7 @@ body{
 .month-info{
   display: flex;
   justify-content: space-between;
+  height:100px;
   align-items: center;
   width: 100%;
   color:#fff;
@@ -56,9 +57,16 @@ body{
 .days div{
   width: 14.28%;
   text-align: center;
-  padding: 15px;
-  font-size: 16px;
+  padding: 13px;
+  font-size: 13px;
+  transition: all 0.2s;
 }
+
+.day:hover {
+  cursor: pointer;
+  background-color: #dfe6e9
+}
+
 
 .next-btn,
 .prev-btn{

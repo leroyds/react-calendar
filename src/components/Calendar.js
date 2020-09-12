@@ -23,6 +23,8 @@ function Calendar() {
     const [daysInMonth, setdaysInMonth] = useState(getDaysInMonth(date));
     const [firstDayOfMonth, setFirstDayOfMonth] = useState(getFirstDayOfMonth(date))
 
+    
+
     useEffect(()=>{
         setDay(date.getDate());
         setMonth(date.getMonth());

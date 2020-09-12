@@ -9,7 +9,7 @@ const NextButton = ( {setDate, date}) => {
     return (
 
         <div className="prev-btn" onClick={nextClick}>
-            <span>Prev</span>
+            <span>Next</span>
         </div>
     )
     

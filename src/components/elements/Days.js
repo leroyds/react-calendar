@@ -15,11 +15,10 @@ function Days({daysInMonth, firstDayOfMonth}){
                 <div key={i}></div>
             )
         } 
-
         else{
             
             daysItem.push(
-            <div key={i}>{i-counterHelp}</div>
+            <div key={i} className="day">{i-counterHelp}</div>
             )
         }
     }
