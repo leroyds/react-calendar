@@ -1,10 +1,11 @@
 import React from 'react'
 
+//returns the display info for the calendar header
 const InfoBox = ({month, date}) => {
 
     const MONTHS = [
         'January', 'February', 'March', 'April', 
-        'May', 'june', 'July', 'August', 'September', 
+        'May', 'June', 'July', 'August', 'September', 
         'October', 'November', 'December'];
     month = MONTHS[month]
 

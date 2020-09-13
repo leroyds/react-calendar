@@ -5,7 +5,7 @@ import PrevButton from './subElements/Header/PrevButton'
 import NextButton from './subElements/Header/NextButton'
 import InfoBox from './subElements/Header/InfoBox'
 
-
+//Returns Calendar Header
 function Month({month, date, setDate}) {
     
     return(

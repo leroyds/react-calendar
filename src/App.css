@@ -100,15 +100,20 @@ h2{
   text-align: center;
   padding: 13px;
   font-size: 13px;
-  transition: all 0.4s;
   font-weight: 900;
+  transition: all 0.3ss;
 }
+
+
 
 .day:hover {
   cursor: pointer;
   /* background-color: #dfe6e9 */
   color: black;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 
+.event{
+  background-color: yellow;
+}
