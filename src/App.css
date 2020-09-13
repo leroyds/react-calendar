@@ -7,23 +7,36 @@
 body{
   margin: 0;
   font-family: "Lato", "sans-serif";
+  background: url(images/bg2.jpg) no-repeat center center fixed;
+  background-size: cover; 
 }
 
+/* entire display */
 .wrapper{
   display: flex;
   width: 100vw;
   height:100vh;
-  background-color: #dfe6e9;
+  /* background-color: #dfe6e9; */
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* calendar body */
 .calendar{
   width: 600px;
   height: 400px;
   background-color: #fff;
   margin: auto;
   box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.3);
+  background:rgba(0,0,0, 0.5);
 }
 
+/* =============================================*/
+/* Header Section */
+/* =============================================*/
+h2{
+  font-weight: 200;
+  padding: 10px;
+}
 .month-info{
   display: flex;
   justify-content: space-between;
@@ -31,14 +44,36 @@ body{
   align-items: center;
   width: 100%;
   color:#fff;
-  background-color: #2ecc71;
+  /* background-color: #2ecc71; */
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 40px 30px;
   text-align: center;
 }
 
+.next-btn,
+.prev-btn{
+
+  background-color: rgba(250, 250,250,0.2);
+  display: inline-block;
+  border-radius: 50px;
+  padding: 15px;
+  transition: all 0.3s;
+}
+
+.next-btn:hover,
+.prev-btn:hover{
+  cursor: pointer;
+  background-color: rgba(250, 250,250,0.5);
+
+}
+
+/* =============================================*/
+/* Week Days Section */
+/* =============================================*/
 .week-days{
   display: flex;
-  background-color: #27ae60;
+  /* background-color: #27ae60; */
+  background-color: rgba(250, 250, 250, 0.2);
   color: white;
   padding: 7px 0;
 }
@@ -48,9 +83,15 @@ body{
   text-align: center;
 }
 
+/* =============================================*/
+/* Days Section */
+/* =============================================*/
+
 .days{
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
+  color: white;
   
 }
 
@@ -59,26 +100,15 @@ body{
   text-align: center;
   padding: 13px;
   font-size: 13px;
-  transition: all 0.2s;
+  transition: all 0.4s;
+  font-weight: 900;
 }
 
 .day:hover {
   cursor: pointer;
-  background-color: #dfe6e9
+  /* background-color: #dfe6e9 */
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 
-.next-btn,
-.prev-btn{
-
-  background-color: rgba(0, 0,0,0.2);
-  display: inline-block;
-  border-radius: 50px;
-  padding: 15px;
-}
-
-.next-btn:hover,
-.prev-btn:hover{
-  cursor: pointer;
-  background-color: rgba(0, 0,0,0.4);
-}

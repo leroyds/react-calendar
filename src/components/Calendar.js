@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import getDaysInMonth from './ownFunctions/GetDaysInMonth'
 import getFirstDayOfMonth from './ownFunctions/GetFirstDayOfMonth'
+import Fetch2019Events from './ownFunctions/Fetch2019Events'
 
 // components import
 import Header from './elements/Header'
@@ -9,10 +10,6 @@ import WeekDays from './elements/WeekDays'
 import Days from './elements/Days'
 
 function Calendar() {
-    const MONTHS = [
-    'January', 'February', 'March', 'April', 
-    'May', 'june', 'July', 'August', 'September', 
-    'October', 'November', 'December'];
 
     const today = new Date(); //current date obj
 
@@ -23,6 +20,9 @@ function Calendar() {
     const [daysInMonth, setdaysInMonth] = useState(getDaysInMonth(date));
     const [firstDayOfMonth, setFirstDayOfMonth] = useState(getFirstDayOfMonth(date))
 
+
+    // event
+    const [events, setEvents] = useState([])
     
 
     useEffect(()=>{
@@ -31,6 +31,7 @@ function Calendar() {
         setYear(date.getFullYear());
         setdaysInMonth(getDaysInMonth(date));
         setFirstDayOfMonth(getFirstDayOfMonth(date));
+        // setEvents(Fetch2019Events(date))
     },[date])
     
     return( 

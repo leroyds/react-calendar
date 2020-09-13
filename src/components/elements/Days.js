@@ -1,25 +1,22 @@
 import React from 'react'
 
+import DateButton from './subElements/DateEvents/DateButton'
+import EmptyButton from './subElements/DateEvents/EmptyButton'
 
 
 function Days({daysInMonth, firstDayOfMonth}){
 
-    let daysItem = []
-    const totalLoop = daysInMonth + firstDayOfMonth;
-    const counterHelp = firstDayOfMonth -1
+    let daysItem = [] //stores calendar date blocks i.e date and empty blocks
+    const totalLoop = daysInMonth + firstDayOfMonth; //loop count to get the no of days of the month including the empty space at the start
+    const counterHelp = firstDayOfMonth - 1 //minuses the empty space count from from the loop count to get the date
 
     for(let i = 0; i < totalLoop ; i++){
         
         if(i < firstDayOfMonth){
-            daysItem.push(
-                <div key={i}></div>
-            )
+            daysItem.push(<EmptyButton loopkey={i}/>)
         } 
         else{
-            
-            daysItem.push(
-            <div key={i} className="day">{i-counterHelp}</div>
-            )
+            daysItem.push(<DateButton loopKey={i} counterHelp={counterHelp}/>)
         }
     }
 
