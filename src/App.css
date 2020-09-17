@@ -135,17 +135,35 @@ h2{
 /* Modal Section */
 /* =============================================*/
 .modal-bg{
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   top:0;
   left: 0;
   height: 100vh;
   width: 100vw;
-  color: black;
+  color: white;
   visibility: hidden;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 80px;
+  letter-spacing: .35em;
+  text-align: center;
 }
 
+.modal-cancel{
+  position: fixed;
+  top: 10px;
+  right: 40px;
+  cursor: pointer;
+}
 .modal-display{
   visibility: visible;
+}
+.modal-date{
+  font-size: 30px;
+  margin-bottom: 30px;
+  letter-spacing: .3em;
+  display: block;
 }

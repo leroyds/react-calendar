@@ -1,10 +1,13 @@
 import React,{useState} from 'react'
+import Modal from './Modal'
 
 function DateBtn({dayData}) {
 
     console.log(dayData[24].event.event)
     let dates = []
     const [modalActive, setModalActive] = useState('')
+    const [modalText, setModalText] = useState('')
+    const [modalDate, setModalDate] = useState('')
 
     for (let i=0; i<dayData.length;i++){
         let eventClass = ''
@@ -15,7 +18,9 @@ function DateBtn({dayData}) {
         
         // on click functions
         const clickBtn = () => {
-            alert(eventName);
+            setModalActive('modal-display')
+            setModalText(eventName)
+            setModalDate(dayData[i].id)
         }
         const nothing = () => {
             return 
@@ -32,7 +37,12 @@ function DateBtn({dayData}) {
             </div>)
     }
 
-    return <>{dates}</>
+    return (
+        <>
+                {dates}
+                <Modal modalActive={modalActive} setModalActive={setModalActive} modalText={modalText} modalDate={modalDate}/>
+        </>
+        )
             
 }
 
