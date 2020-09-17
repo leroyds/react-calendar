@@ -1,3 +1,5 @@
+// click event function for the next button
+
 import React from 'react'
 
 const NextButton = ( {setDate, date}) => {
@@ -7,13 +9,10 @@ const NextButton = ( {setDate, date}) => {
     }
 
     return (
-
         <div className="prev-btn" onClick={nextClick}>
             <span>Next</span>
         </div>
     )
-    
-
 }
 
 export default NextButton

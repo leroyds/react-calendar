@@ -95,13 +95,15 @@ h2{
   
 }
 
-.days div{
-  width: 14.28%;
+.day,
+.day-empty{
+  width: 13.85%;
   text-align: center;
   padding: 13px;
   font-size: 13px;
   font-weight: 900;
   transition: all 0.3ss;
+  margin: 1px;
 }
 
 
@@ -113,7 +115,37 @@ h2{
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+/* =============================================*/
+/* Event css */
+/* =============================================*/
+
 
 .event{
-  background-color: yellow;
+  background-color: rgba(250, 250,250, 0.2);
+  transition: all 0.3s;
+  
+}
+
+.event:hover{
+  background-color: rgba(250, 250,250, 0.5);
+  color: white;
+}
+
+/* =============================================*/
+/* Modal Section */
+/* =============================================*/
+.modal-bg{
+  background-color: white;
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  color: black;
+  visibility: hidden;
+
+}
+
+.modal-display{
+  visibility: visible;
 }

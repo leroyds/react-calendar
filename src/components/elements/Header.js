@@ -6,7 +6,7 @@ import NextButton from './subElements/Header/NextButton'
 import InfoBox from './subElements/Header/InfoBox'
 
 //Returns Calendar Header
-function Month({month, date, setDate}) {
+function Month({month, date, setDate, events}) {
     
     return(
         <div className="month-info">

@@ -1,3 +1,5 @@
+// click function for the previous button on the calendar
+
 import React from 'react'
 
 const PrevButton = ( {setDate, date}) => {
@@ -7,13 +9,10 @@ const PrevButton = ( {setDate, date}) => {
     }
 
     return (
-
         <div className="prev-btn" onClick={prevClick}>
             <span>Prev</span>
         </div>
     )
-    
-
 }
 
 export default PrevButton

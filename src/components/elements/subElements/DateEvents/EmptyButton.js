@@ -1,8 +1,16 @@
 import React from 'react' 
 
-const EmptyButton = ({loopKey}) => {
+const EmptyButton = ({firstDayOfMonth}) => {
+
+    let emptyDaysDisplay = []
+    for(let i=0;i<firstDayOfMonth;i++){
+        emptyDaysDisplay.push(<div key={i} className="day-empty"></div>)
+    }
     return(
-        <div key={loopKey}></div>
+        
+        <>
+            {emptyDaysDisplay}
+        </>
     )
 }
 
